@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>After School Club Registration</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to the external CSS file -->
+    <script src="script.js" defer></script> <!-- Link to the external JS file -->
+</head>
+<body>
+    
+    <div class="registration-form">
+        <h1>After School Club Registration Form</h1>
+        <form id="clubRegistrationForm">
+            <label for="studentName">Student's Name:</label>
+            <input type="text"  id="studentName" name="studentName" placeholder="First" required>
+            <br>
+            <label for="studentBirthDate">Student's Birth Date:</label>
+            <input type="date" id="studentBirthDate" className="studentBirthDate" required>
+            <br>
+            <label for="studentGrade">Student's Grade:</label>
+            <select id="studentGrade" name="studentGrade" required>
+                <option value="">Select Grade</option>
+                <option value="Kindergarten">Kindergarten</option>
+                <option value="1st Grade">1st Grade</option>
+                <option value="2nd Grade">2nd Grade</option>
+                <!-- Add more options as needed -->
+            </select>
+            <br>
+            <label>Which sessions will your student attend?</label>
+            <input type="radio" id="beforeSchool" name="session" class="session" value="2000" required> Full-time Before School Care Only (Rs. 2000)<br>
+            <input type="radio" id="afterSchool" name="session" class="session" value="2500" required> Full-time After School Care Only (Rs. 2500)<br>
+            <input type="radio" id="beforeAndAfterSchool" name="session" class="session" value="5000" required> Full-time Before AND After School Care (Rs. 5000)<br>
+            <input type="radio" id="dropIn" name="session" class="session" value="4000" required> Drop-In Before AND/OR School Care (Rs. 4000)<br>
+<br>
+            <label for="allergies">Please indicate any known allergies or special needs:</label>
+            <textarea id="allergies" name="allergies"></textarea>
+<br>
+            <label for="parentName">Parent/Guardian Name:</label>
+            <input type="text" id="parentName" name="parentName" required>
+<br>
+            <label for="parentPhone">Parent/Guardian Phone Number:</label>
+            <input type="tel" id="parentPhone" name="parentPhone" required pattern="[0-9]{10}">
+<br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+<br>
+            <button type="submit">Submit</button>
+        </form>
+        <div id="confirmation" style="display: none;">
+            <h2>Registration Confirmation</h2>
+            <p id="confirmationDetails"></p>
+        </div>
+    </div>
+</body>
+</html>
